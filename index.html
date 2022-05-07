@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 
 </head>
 
@@ -25,10 +28,53 @@
             </div>	
         </div>	
         <div class="buttons">	
-            <button>Load User Data</button>	
-            <button>Display User</button>	
+            <button class="loadData">Load User Data</button>	
+            <button class="displayData" >Display User</button>	
         </div>	
     </div>
+
+    <script id="Friends-template" type="text/x-handlebars-template">
+        <div class = "friendContainer"><p class = "fullName">{{_firstName}} {{_lastName}}</p></div>
+      </script>
+
+    <script id="quote-template" type="text/x-handlebars-template">
+    <div class = "quoteContainer">
+        <p class = "quote">Favorite quote:</p>
+        <p >{{_quote}}</p>
+        <p >-{{_authorName}}</p>
+                    </div>
+    </script>  
+
+    <script id="meaty-template" type="text/x-handlebars-template">
+        <div class = "meatyContainer">
+            <p class = "quote">About me:</p>
+            <p >{{_meatyParagraph}}</p>
+        </div>
+    </script>  
+
+    <script id="mainUser-template" type="text/x-handlebars-template">
+        <div class= "mainUserContainer">
+            <div ><img class="profilePicture" src= "{{_picture}}" ></div>
+            <div class = "userData">
+                <div class="fullName">{{_firstName}} {{_lastName}}</div>
+                <div class="location">{{_city}},{{_state}}</div>
+            </div>
+        </div>
+    </script>
+    
+    <script id="pokemon-template" type="text/x-handlebars-template">
+        <div class= "pokemonUserContainer">
+            <div class = "pokemonPicture"><img class="pokemonImage" src= "{{_pictureURL}}" ></div>
+            <div class = "pokemonData">
+                <div class="name">Favorite Pokemon:{{_name}}</div>
+            </div>
+        </div>
+    </script>
+
+    <script src="model.js" ></script>
+    <script src="APIManager.js"></script>
+    <script src="Renderer.js" ></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -126,3 +126,61 @@ button {
     padding: 1vw;
     font-size: 1vmax;
 }
+
+.friend{
+    margin: 10%;
+}
+
+.fullName{
+    color: aliceblue;
+    font:x-large;
+    
+}
+.mainUserContainer{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.userData{
+    margin: 20px;
+    display: inline-flex;
+    color: aliceblue;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pokemonUserContainer{
+    display: inline-flex;
+    margin: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pokemonData{
+    display: inline-flex;
+    font-weight: bolder;
+    margin: 5px;
+    flex:none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profilePicture{
+    border-radius: 50%;
+   
+}
+
+.pokemonImage{
+    height: 100px;
+    width: 100px;
+}
+
+.meatyContainer{
+    margin: 10px;
+}
+
+.quote{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
